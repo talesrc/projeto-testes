@@ -1,4 +1,4 @@
-[![Node.js CI](https://github.com/talesrc/livraria-api/actions/workflows/main.yml/badge.svg)](https://github.com/talesrc/livraria-api/actions/workflows/main.yml)
-# livraria-webii
+[![LivrariaCI](https://github.com/talesrc/projeto-testes/actions/workflows/main.yml/badge.svg)](https://github.com/talesrc/projeto-testes/actions/workflows/main.yml)
+Projeto desenvolvido em Node.js e Jest.
 
-Projeto feito por: Marcos Barros, Tales Ribeiro, Vinicius Augusto
+Os testes rodaram no GitHub Actions também.
