@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title Menu Produtos
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    
+    header
+        h1
+            a.home(href="/") LIVRARIA UEBITCHU
+    body
+    
+        div.crud
+            a.btn.btn-primary(href='/admin/product/create') Criar Produto
+
+            table
+                tr
+                    th Nome
+                    th Preço
+                    th Autor
+                    th Ações
+                
+
+                each product, i in products
+                    tr
+                        td #{product.name}
+                        td #{product.price}
+                        td #{product.author}
+                        td 
+                            a.btn.btn-primary(href=`/admin/product/update/${product.id}`) Editar
+                            a.btn.btn-primary(href=`/admin/product/delete/${product.id}`) Excluir
+                            br
+            
+            a.btn.btn-primary(href=`/admin/menu`) Voltar
+        

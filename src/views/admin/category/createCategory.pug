@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title Adicionar Categoria
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+
+        div.desc
+            h2 ADICIONAR CATEGORIA
+
+            form(method='POST', action='/admin/category/create')
+                label Nome da categoria:
+                input.form-control(name='name', type='text').loginput
+                br
+                input.btn.btn-primary(type='submit',value='Submit')

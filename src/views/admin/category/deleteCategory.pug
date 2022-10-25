@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title Remover Categoria
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+
+
+        div.loginput
+            h2 REMOVER CATEGORIA
+
+            form(method='POST', action=`/admin/category/delete`)
+                label Id:
+                input.form-control(name='id', type='text', value=category.id, readonly, required)
+                label Nome:
+                input.form-control(name='name', type='text', value=category.name, readonly, required)
+                br
+                input.btn.btn-primary(type='submit',value='Remover')

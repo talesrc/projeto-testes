@@ -1,0 +1,11 @@
+name: LivrariaCI
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose up -d
+      - name: Tests
+        run: sleep 10 && docker exec app npm test

@@ -1,0 +1,173 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: #333;
+    height: 80px;
+    color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+table {
+    align-items: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn,
+.btn-primary {
+    background-color: #333 !important;
+    width: auto !important;
+}
+
+.home {
+    text-decoration: none;
+    color: white;
+}
+
+.log {
+    text-align: center;
+    margin: auto;
+}
+
+.loginput {
+    text-align: center;
+    margin: auto;
+    max-width: 300px;
+}
+
+.auth {
+    padding-top: 80px;
+    text-align: center;
+    margin: auto;
+}
+
+.desc {
+    text-align: center;
+    margin: auto;
+}
+
+.main-div {
+    text-align: center;
+    border-style: double;
+    width: fit-content;
+    margin: auto;
+    padding: 30px;
+}
+
+.books {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.productBox {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    border: 1px #333 solid;
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+
+.imageBox {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.showImage{
+    max-width: 60%;
+}
+
+.productCard {
+    display: inline-block;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 300px;
+}
+
+.productCardImage {
+    width: 100%;
+}
+
+.tags {
+    flex-direction: row;
+}
+
+.categoryTag {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 8px;
+    margin-right: 2px;
+    display: inline-block;
+}
+
+.crud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.productOrderBox {
+    height: 170px;
+    width: 60%;
+    border: solid 1px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.productOrderImage {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.invisible {
+    width: 0px;
+    height: 0px;
+}
+
+td {
+    padding: 0px 5px;
+}
+
+.userLinks{
+    text-align: end;
+    position: absolute;
+    height: 100px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}

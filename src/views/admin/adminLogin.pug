@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title LOGIN
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+        
+        
+        div.box
+            div.log
+                h2 LOGIN ADMINISTRADOR
+
+                form(method='POST', action='/admin/login')
+                    label Email:
+                    input.form-control(name='email',type='text').loginput
+                    
+                    label Password:
+                    input.form-control(name='password',type='password').loginput
+                    br
+                    input.btn.btn-primary(type='submit',value='Entrar').loginput
+
+                a(href="/admin/signUpAdmin") Não tem cadastro? clique aqui
+                br
+                a.log(href="/login") Deseja logar como usuário?

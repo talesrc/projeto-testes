@@ -1,0 +1,28 @@
+doctype html
+
+html
+    head
+        title Home
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+            
+            div.userLinks
+                a(href='/login') login
+                br
+                a(href='/cart') Carrinho de compras
+                
+        
+        div.homeContainer
+            h2 LIVROS
+          
+            div.books
+                each product, i in products
+                    a(href=`/product/${product.id}`).bg-dark.productCard
+                        img(src=product.image).productCardImage
+                        p= product.name
+                        p= product.author
+                        p  R$#{product.price}

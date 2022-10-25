@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title LOGIN
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+        
+        
+        div.box
+            div.log
+                h2 CADASTRO:
+
+                form(method='POST', action='/admin/register')
+                    label CPF:
+                    input.form-control(name='cpf',type='text' required).loginput
+
+                    label Nome :
+                    input.form-control(name='name',type='text' required).loginput
+                    
+                    label Senha
+                    input.form-control(name='password',type='password' required).loginput
+                    
+
+                    label Email:
+                    input.form-control(name='email',type='text' required).loginput
+
+
+                    br
+                    input.btn.btn-primary(type='submit',value='Enviar' required).loginput
+
+                a(href="/admin/alogin") Já tem cadastro? Clique aqui para logar 
+
+                    

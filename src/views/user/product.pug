@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title= product.name
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1
+                a.home(href="/") LIVRARIA UEBITCHU
+
+            div.userLinks
+                a(href='/login') login
+                br
+                a(href='/cart') Carrinho de compras
+        div.homeContainer
+            div.productBox
+                .imageBox
+                    img.showImage(src=product.image)
+                .bookInfo 
+                    h3= product.name 
+                    h4= product.author 
+                    p= product.description
+                    .tags
+                    each category in product.categories 
+                        p.categoryTag= category.name
+                    br
+                    form(method='POST', action=`/order/addProduct/${product.id}`, enctype='multipart/form-data')
+                        input.btn.btn-primary(type='submit',value='Adicionar ao Carrinho')

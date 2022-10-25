@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        title Adicionar Produto
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+
+        h2.desc
+            ADICIONAR PRODUTO:
+
+        div.loginput
+            form(method='POST', action='/admin/product/create', enctype='multipart/form-data')
+                label Nome:
+                input.form-control(name='name', type='text', required)
+                label Descrição:
+                input.form-control(name='description', type='text', maxlength=255, required)
+                label Preço:
+                input.form-control(name='price', type='number', min=0, max=10000, step='.01', required)
+                label Autor:
+                input.form-control(name='author', type='text', required)
+                label Imagem:
+                input.form-control(name='image', type='file', accept='image/*', required)
+                label Categorias:
+                br
+                each category in categories
+                    .form-check.form-check-inline 
+                        input.form-check-input(value=category.id, type='checkbox', name='categories')
+                        label.form-check-label= category.name
+                br
+                input.btn.btn-primary(type='submit',value='Enviar')

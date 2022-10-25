@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title LOGIN
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+
+        div.homeContainer
+            each product in products
+                div.productOrderBox
+                    .productOrderImage
+                        img(src= product.image)
+
+                    .productOrderInfo
+                        h4= product.name
+                        h7= product.author
+                        h5  #[strong R$#{product.price}]
+                        form(method='POST', action=`/order/removeProduct/${product.id}`)
+                            input.btn.btn-primary(type='submit', value='Remover')
+            
+            if totalPrice > 0
+                h4 #[strong Total: #{totalPrice}]
+                h7  #[strong APENAS RETIRADA NA LOJA!]
+            else
+                h7  #[strong SEU CARRINHO ESTÁ VAZIO!]
+                a(href="/") VOLTAR A PÁGINA INICIAL           
+            
+
+            form(method='POST', action='/user/createOrder')
+                input(name='price', type='hidden', step='.01', value=totalPrice)
+                if totalPrice > 0
+                    br
+                    input.btn.btn-primary(type='submit', value='Finalizar Pedido')
+            

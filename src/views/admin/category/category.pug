@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title Menu Categorias
+        link(rel='stylesheet' href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        header
+            h1 
+                a.home(href="/") LIVRARIA UEBITCHU
+
+        div.crud
+            a.btn.btn-primary(href='/admin/category/create') Criar Categoria
+
+            table
+                tr
+                    th ID
+                    th Categoria
+                    th Ações
+
+                each category, i in categories
+                    tr
+                        td #{category.id}
+                        td #{category.name}
+                        td 
+                            a.btn.btn-primary(href=`/admin/category/update/${category.id}`) Editar
+                            a.btn.btn-primary(href=`/admin/category/delete/${category.id}`) Excluir
+
+            a.btn.btn-primary(href=`/admin/menu`) Voltar
